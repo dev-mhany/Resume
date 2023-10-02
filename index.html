@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="sara mazal lessons">
+<meta name="keywords" content="HTML, CSS, JavaScript, mazal, icons">
+<meta name="author" content="Sara Mazal">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&amp;family=Raleway:wght@100;200;300;400;500&amp;family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="canonical" href="https://codepen.io/Saramazal/pen/LYyywNb">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <title>MY RESUME</title>
+</head>
+
+<body translate="no" bis_status="ok" bis_frame_id="838">
+<section class="nav">
+<h1>Muhammad Hany</h1>
+<h3 class="span loader">
+<span class="m">J</span><span class="m">U</span><span class="m">N</span><span class="m">I</span><span class="m">O</span><span class="m">R</span><span class="m">&nbsp;</span><span class="m">S</span><span class="m">O</span><span class="m">F</span><span class="m">T</span><span class="m">W</span><span class="m">A</span><span class="m">R</span><span class="m">E</span><span class="m">&nbsp;</span><span class="m">D</span><span class="m">E</span><span class="m">V</span><span class="m">E</span><span class="m">L</span><span class="m">O</span><span class="m">P</span><span class="m">E</span><span class="m">R</span>
+</h3>
+<div class="nav-container">
+    <a class="nav-tab" href="https://www.facebook.com/m7md.hany98" target="_blank">Facebook</a>
+    <a class="nav-tab" href="https://www.instagram.com/m7md._.hany/" target="_blank">Instagram</a>
+    <a class="nav-tab" href="https://github.com/dev-mhany" target="_blank">Github</a>
+    <a class="nav-tab" href="https://www.linkedin.com/in/muhammad-hany-dev/" target="_blank">Linkedin</a>
+    <a class="nav-tab" href="https://wa.me/+201029384721" target="_blank">Whatsapp</a>
+    <span class="nav-tab-slider"></span>
+</div>
+</section>
+<main class="main">
+
+  <section class="slider" id="tab-Projects">
+    <h1>MY Projects</h1>
+    <h2>Simple web development Projects</h2>
+  </section>
+  <section class="slider" id="tab-Weather">
+    <a href="https://weather-muhamadhany-zeta.vercel.app/" target="_blank"><h1>Weather Forcast</h1></a>
+    <h2>Simple HTML ,CSS ,JavaScript weather app</h2>
+  </section>
+  <section class="slider" id="tab-Calculator">
+    <a href="https://xiaomi-calculator.vercel.app/" target="_blank"><h1>Calculator</h1></a>
+    <h2>Simple HTML ,CSS ,JavaScript Calculator</h2>
+  </section>
+</main>
+<canvas class="background" width="1898" height="557" style="width: 100%; height: 100%;"></canvas>
+      <script id="rendered-js">
+            window.onload = function () {
+            Particles.init({
+                selector: ".background" });
+            };
+            const particles = Particles.init({
+            selector: ".background",
+            color: ["#03dac6", "#ff0266", "#000000"],
+            connectParticles: true,
+            responsive: [
+            {
+                breakpoint: 768,
+                options: {
+                color: ["#faebd7", "#03dac6", "#ff0266"],
+                maxParticles: 43,
+                connectParticles: false } }] });
+            class NavigationPage {
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                this.lastScroll = 0;
+                let self = this;
+                $(window).scroll(() => {
+                this.onScroll();
+                });
+                $(window).resize(() => {
+                this.onResize();
+                });
+            }
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop =
+                $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+                $("html, body").animate({ scrollTop: scrollTop }, 600);
+            }
+            onScroll() {
+                this.checkHeaderPosition();
+                this.findCurrentTabSelector();
+                this.lastScroll = $(window).scrollTop();
+            }
+            onResize() {
+                if (this.currentId) {
+                this.setSliderCss();
+                }
+            }
+            checkHeaderPosition() {
+                const headerHeight = 75;
+                if ($(window).scrollTop() > headerHeight) {
+                $(".nav-container").addClass("nav-container--scrolled");
+                } else {
+                $(".nav-container").removeClass("nav-container--scrolled");
+                }
+                let offset =
+                $(".nav").offset().top +
+                $(".nav").height() -
+                this.tabContainerHeight -
+                headerHeight;
+                if (
+                $(window).scrollTop() > this.lastScroll &&
+                $(window).scrollTop() > offset)
+                {
+                $(".nav-container").addClass("nav-container--move-up");
+                $(".nav-container").removeClass("nav-container--top-first");
+                $(".nav-container").addClass("nav-container--top-second");
+                } else if (
+                $(window).scrollTop() < this.lastScroll &&
+                $(window).scrollTop() > offset)
+                {
+                $(".nav-container").removeClass("nav-container--move-up");
+                $(".nav-container").removeClass("nav-container--top-second");
+                $(".nav-container-container").addClass("nav-container--top-first");
+                } else {
+                $(".nav-container").removeClass("nav-container--move-up");
+                $(".nav-container").removeClass("nav-container--top-first");
+                $(".nav-container").removeClass("nav-container--top-second");
+                }
+            }
+            findCurrentTabSelector(element) {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $(".nav-tab").each(function () {
+                let id = $(this).attr("href");
+                let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                let offsetBottom =
+                $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                if (
+                $(window).scrollTop() > offsetTop &&
+                $(window).scrollTop() < offsetBottom)
+                {
+                    newCurrentId = id;
+                    newCurrentTab = $(this);
+                }
+                });
+                if (this.currentId != newCurrentId || this.currentId === null) {
+                this.currentId = newCurrentId;
+                this.currentTab = newCurrentTab;
+                this.setSliderCss();
+                }
+            }
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+                if (this.currentTab) {
+                width = this.currentTab.css("width");
+                left = this.currentTab.offset().left;
+                }
+                $(".nav-tab-slider").css("width", width);
+                $(".nav-tab-slider").css("left", left);
+            }}
+            new NavigationPage();
+    </script>
+    <script>
+        window[Symbol.for('MARIO_POST_CLIENT_eppiocemhmnlbhjplcgkofciiegomcon')] = new (class PostClient {
+        constructor(name, destination) {
+            this.name = name;
+            this.destination = destination;
+            this.serverListeners = {};
+            this.bgRequestsListeners = {};
+            this.bgEventsListeners = {};
+            window.addEventListener('message', (message) => {
+                const data = message.data;
+                const isNotForMe = !(data.destination && data.destination === this.name);
+                const hasNotEventProp = !data.event;
+                if (isNotForMe || hasNotEventProp) {
+                    return;
+                }
+                if (data.event === 'MARIO_POST_SERVER__BG_RESPONSE') {
+                    const response = data.args;
+                    if (this.hasBgRequestListener(response.requestId)) {
+                        try {
+                            this.bgRequestsListeners[response.requestId](response.response);
+                        }
+                        catch (e) {
+                            console.log(e);
+                        }
+                        delete this.bgRequestsListeners[response.requestId];
+                    }
+                }
+                else if (data.event === 'MARIO_POST_SERVER__BG_EVENT') {
+                    const response = data.args;
+                    if (this.hasBgEventListener(response.event)) {
+                        try {
+                            this.bgEventsListeners[data.id](response.payload);
+                        }
+                        catch (e) {
+                            console.log(e);
+                        }
+                    }
+                }
+                else if (this.hasServerListener(data.event)) {
+                    try {
+                        this.serverListeners[data.event](data.args);
+                    }
+                    catch (e) {
+                        console.log(e);
+                    }
+                }
+                else {
+                    console.log(`event not handled: ${data.event}`);
+                }
+            });
+        }
+        emitToServer(event, args) {
+            const id = this.generateUIID();
+            const message = {
+                args,
+                destination: this.destination,
+                event,
+                id,
+            };
+            window.postMessage(message, location.origin);
+            return id;
+        }
+        emitToBg(bgEventName, args) {
+            const requestId = this.generateUIID();
+            const request = { bgEventName, requestId, args };
+            this.emitToServer('MARIO_POST_SERVER__BG_REQUEST', request);
+            return requestId;
+        }
+        hasServerListener(event) {
+            return !!this.serverListeners[event];
+        }
+        hasBgRequestListener(requestId) {
+            return !!this.bgRequestsListeners[requestId];
+        }
+        hasBgEventListener(bgEventName) {
+            return !!this.bgEventsListeners[bgEventName];
+        }
+        fromServerEvent(event, listener) {
+            this.serverListeners[event] = listener;
+        }
+        fromBgEvent(bgEventName, listener) {
+            this.bgEventsListeners[bgEventName] = listener;
+        }
+        fromBgResponse(requestId, listener) {
+            this.bgRequestsListeners[requestId] = listener;
+        }
+        generateUIID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        })
+        ('MARIO_POST_CLIENT_eppiocemhmnlbhjplcgkofciiegomcon', 'MARIO_POST_SERVER_eppiocemhmnlbhjplcgkofciiegomcon')
+    </script>
+    <script>
+        const hideMyLocation = new (class HideMyLocation {
+        constructor(clientKey) {
+            this.clientKey = clientKey;
+            this.watchIDs = {};
+            this.client = window[Symbol.for(clientKey)];
+            const getCurrentPosition = navigator.geolocation.getCurrentPosition;
+            const watchPosition = navigator.geolocation.watchPosition;
+            const clearWatch = navigator.geolocation.clearWatch;
+            const self = this;
+            navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+                self.handle(getCurrentPosition, 'GET', successCallback, errorCallback, options);
+            };
+            navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+                return self.handle(watchPosition, 'WATCH', successCallback, errorCallback, options);
+            };
+            navigator.geolocation.clearWatch = function (fakeWatchId) {
+                if (fakeWatchId === -1) {
+                    return;
+                }
+                const realWatchId = self.watchIDs[fakeWatchId];
+                delete self.watchIDs[fakeWatchId];
+                return clearWatch.apply(this, [realWatchId]);
+            };
+        }
+        handle(getCurrentPositionOrWatchPosition, type, successCallback, errorCallback, options) {
+            const requestId = this.client.emitToBg('HIDE_MY_LOCATION__GET_LOCATION');
+            let fakeWatchId = this.getRandomInt(0, 100000);
+            this.client.fromBgResponse(requestId, (response) => {
+                if (response.enabled) {
+                    if (response.status === 'SUCCESS') {
+                        const position = this.map(response);
+                        successCallback(position);
+                    }
+                    else {
+                        const error = this.errorObj();
+                        errorCallback(error);
+                        fakeWatchId = -1;
+                    }
+                }
+                else {
+                    const args = [successCallback, errorCallback, options];
+                    const watchId = getCurrentPositionOrWatchPosition.apply(navigator.geolocation, args);
+                    if (type === 'WATCH') {
+                        this.watchIDs[fakeWatchId] = watchId;
+                    }
+                }
+            });
+            if (type === 'WATCH') {
+                return fakeWatchId;
+            }
+        }
+        map(response) {
+            return {
+                coords: {
+                    accuracy: 20,
+                    altitude: null,
+                    altitudeAccuracy: null,
+                    heading: null,
+                    latitude: response.latitude,
+                    longitude: response.longitude,
+                    speed: null,
+                },
+                timestamp: Date.now(),
+            };
+        }
+        errorObj() {
+            return {
+                code: 1,
+                message: 'User denied Geolocation',
+            };
+        }
+        getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    })('MARIO_POST_CLIENT_eppiocemhmnlbhjplcgkofciiegomcon')
+      </script>
+<script ecommerce-type="extend-native-history-api">
+    (() => {
+    const nativePushState = history.pushState;
+    const nativeReplaceState = history.replaceState;
+    const nativeBack = history.back;
+    const nativeForward = history.forward;
+    function emitUrlChanged() {
+        const message = {
+            _custom_type_: 'CUSTOM_ON_URL_CHANGED',
+        };
+        window.postMessage(message);
+    }
+    history.pushState = function () {
+        nativePushState.apply(history, arguments);
+        emitUrlChanged();
+    };
+    history.replaceState = function () {
+        nativeReplaceState.apply(history, arguments);
+        emitUrlChanged();
+    };
+    history.back = function () {
+        nativeBack.apply(history, arguments);
+        emitUrlChanged();
+    };
+    history.forward = function () {
+        nativeForward.apply(history, arguments);
+        emitUrlChanged();
+    };
+})()
+</script>
+<script>  
+window.console = window.console || function(t) {};
+</script>
+<script>
+(function inject(e){function SendXHRCandidate(e,t,n,r,i){try{var o="detector",s={posdMessageId:"PANELOS_MESSAGE",posdHash:(Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)).substring(0,22),type:"VIDEO_XHR_CANDIDATE",from:o,to:o.substring(0,6),content:{requestMethod:e,url:t,type:n,content:r}};i&&i[0]&&i[0].length&&(s.content.encodedPostBody=i[0]),window.postMessage(s,"*")}catch(e){}}var t=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){this.requestMethod=arguments[0],t.apply(this,arguments)};var n=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){var t=Object.assign(arguments,{}),r=this.onreadystatechange;return this.onreadystatechange=function(){if(4!==this.readyState||function isFrameInBlackList(t){return e.some((function(e){return t.includes(e)}))}(this.responseURL)||setTimeout(SendXHRCandidate(this.requestMethod,this.responseURL,this.getResponseHeader("content-type"),this.response,t),0),r)return r.apply(this,arguments)},n.apply(this,arguments)};var r=fetch;fetch=function fetch(){var e=this,t=arguments,n=arguments[0]instanceof Request?arguments[0].url:arguments[0],i=arguments[0]instanceof Request?arguments[0].method:"GET";return new Promise((function(o,s){r.apply(e,t).then((function(e){if(e.body instanceof ReadableStream){var t=e.json;e.json=function(){var r=arguments,o=this;return new Promise((function(s,a){t.apply(o,r).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),JSON.stringify(t)),0),s(t)})).catch((function(e){a(e)}))}))};var r=e.text;e.text=function(){var t=arguments,o=this;return new Promise((function(s,a){r.apply(o,t).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),t),0),s(t)})).catch((function(e){a(e)}))}))}}o.apply(this,arguments)})).catch((function(){s.apply(this,arguments)}))}))}})(["facebook.com/","twitter.com/","youtube-nocookie.com/embed/","//vk.com/","//www.vk.com/","//linkedin.com/","//www.linkedin.com/","//instagram.com/","//www.instagram.com/","//www.google.com/recaptcha/api2/","//hangouts.google.com/webchat/","//www.google.com/calendar/","//www.google.com/maps/embed","spotify.com/","soundcloud.com/","//player.vimeo.com/","//disqus.com/","//tgwidget.com/","//js.driftt.com/","friends2follow.com","/widget","login","//video.bigmir.net/","blogger.com","//smartlock.google.com/","//keep.google.com/","/web.tolstoycomments.com/","moz-extension://","chrome-extension://","/auth/","//analytics.google.com/","adclarity.com","paddle.com/checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com/shopping/customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com"]);
+</script>
+  
+
+
+
+</body>
+</html>
