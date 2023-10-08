@@ -72,6 +72,7 @@ h1:hover, span:hover {
     transition: all 0.5s ease;
     font-size: medium;
     padding: 0.7vw;
+    z-index: 10;
 }
 
 .nav-tab:hover {
