@@ -1,5 +1,4 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -15,13 +14,16 @@ a {
 .nav, .slider {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
     background-color: #1e1f26;
     text-align: center;
     padding: 0 2em;
+}
+.nav {
+    justify-content: center;
+
 }
 
 .nav h1, .slider h1 {
@@ -125,26 +127,26 @@ span:hover {
 
 @media (min-width: 800px) {
     .nav h1, .slider h1 {
-        font-size: 5vw;
+        font-size: 9vw;
     }
 
     .nav h2, .slider h2 {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .nav-tab {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 }
 
 @media screen and (min-width: 360px) {
     .nav h2, .slider h2 {
-        font-size: 2vw;
+        font-size: 4vw;
         letter-spacing: 0.2vw;
     }
 
     .nav-tab {
-        font-size: 1.2vw;
+        font-size: 2.8vw;
     }
 }
 
@@ -272,3 +274,31 @@ span:hover {
     -webkit-animation-delay: 2.2s;
     animation-delay: 2.2s;
 }
+.main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .slider {
+    position: relative;
+    padding: 20px;
+    width: 100%; /* or adjust as needed */
+    transition: transform 0.3s;
+    background: #1e1f26; /* or any other color of your choice */
+}
+
+.slider iframe {
+    border: none; /* Remove the default iframe border */
+    width: 80vw;
+    height: 60vh; /* Adjust height as per your requirements */
+    overflow: hidden;
+}
+  .slider a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .slider:hover {
+    transform: scale(1.02);
+    z-index: 10;
+  }
