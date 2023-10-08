@@ -78,7 +78,24 @@ h1:hover, span:hover {
     background: #03dac6;
     transition: all 0.5s ease;
 }
+.nav-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #03dac6;
+    transition: left 0.3s ease;
+}
+.nav-container--top-first {
+    position: fixed;
+    top: 75px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
+.nav-container--top-second {
+    position: fixed;
+    top: 0;
+}
 .background {
     position: absolute;
     height: 100vh;
