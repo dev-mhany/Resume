@@ -71,6 +71,7 @@ h1:hover, span:hover {
     letter-spacing: 0.1rem;
     transition: all 0.5s ease;
     font-size: medium;
+    padding: 0.7vw;
 }
 
 .nav-tab:hover {
