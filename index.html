@@ -5,6 +5,7 @@
 <meta name="apple-mobile-web-app-title" content="CodePen">
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
     <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
@@ -27,11 +28,12 @@
 <span class="m">J</span><span class="m">U</span><span class="m">N</span><span class="m">I</span><span class="m">O</span><span class="m">R</span><span class="m">&nbsp;</span><span class="m">S</span><span class="m">O</span><span class="m">F</span><span class="m">T</span><span class="m">W</span><span class="m">A</span><span class="m">R</span><span class="m">E</span><span class="m">&nbsp;</span><span class="m">D</span><span class="m">E</span><span class="m">V</span><span class="m">E</span><span class="m">L</span><span class="m">O</span><span class="m">P</span><span class="m">E</span><span class="m">R</span>
 </h3>
 <div class="nav-container">
+    <i class="fas fa-question-circle toggle-colors"></i>
     <a class="nav-tab" href="https://www.facebook.com/m7md.hany98" target="_blank">Facebook</a>
     <a class="nav-tab" href="https://www.instagram.com/m7md._.hany/" target="_blank">Instagram</a>
     <a class="nav-tab" href="https://github.com/dev-mhany" target="_blank">Github</a>
     <a class="nav-tab" href="https://www.linkedin.com/in/muhammad-hany-dev/" target="_blank">Linkedin</a>
-    <a class="nav-tab" href="https://wa.me/+201029384721" target="_blank">Whatsapp</a>
+    <a class="nav-tab" href="https://api.whatsapp.com/send/?phone=%2B201029384721&text=%0A++++Hi%F0%9F%98%8A+&type=phone_number&app_absent=0" target="_blank">Whatsapp</a>
     <span class="nav-tab-slider"></span>
 </div>
 </section>
@@ -110,11 +112,11 @@
             }
             checkHeaderPosition() {
                 const headerHeight = 75;
-                if ($(window).scrollTop() > headerHeight) {
+                /*if ($(window).scrollTop() > headerHeight) {
                 $(".nav-container").addClass("nav-container--scrolled");
                 } else {
                 $(".nav-container").removeClass("nav-container--scrolled");
-                }
+                }*/
                 let offset =
                 $(".nav").offset().top +
                 $(".nav").height() -
@@ -386,6 +388,44 @@ window.console = window.console || function(t) {};
 (function inject(e){function SendXHRCandidate(e,t,n,r,i){try{var o="detector",s={posdMessageId:"PANELOS_MESSAGE",posdHash:(Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)).substring(0,22),type:"VIDEO_XHR_CANDIDATE",from:o,to:o.substring(0,6),content:{requestMethod:e,url:t,type:n,content:r}};i&&i[0]&&i[0].length&&(s.content.encodedPostBody=i[0]),window.postMessage(s,"*")}catch(e){}}var t=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){this.requestMethod=arguments[0],t.apply(this,arguments)};var n=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){var t=Object.assign(arguments,{}),r=this.onreadystatechange;return this.onreadystatechange=function(){if(4!==this.readyState||function isFrameInBlackList(t){return e.some((function(e){return t.includes(e)}))}(this.responseURL)||setTimeout(SendXHRCandidate(this.requestMethod,this.responseURL,this.getResponseHeader("content-type"),this.response,t),0),r)return r.apply(this,arguments)},n.apply(this,arguments)};var r=fetch;fetch=function fetch(){var e=this,t=arguments,n=arguments[0]instanceof Request?arguments[0].url:arguments[0],i=arguments[0]instanceof Request?arguments[0].method:"GET";return new Promise((function(o,s){r.apply(e,t).then((function(e){if(e.body instanceof ReadableStream){var t=e.json;e.json=function(){var r=arguments,o=this;return new Promise((function(s,a){t.apply(o,r).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),JSON.stringify(t)),0),s(t)})).catch((function(e){a(e)}))}))};var r=e.text;e.text=function(){var t=arguments,o=this;return new Promise((function(s,a){r.apply(o,t).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),t),0),s(t)})).catch((function(e){a(e)}))}))}}o.apply(this,arguments)})).catch((function(){s.apply(this,arguments)}))}))}})(["facebook.com/","twitter.com/","youtube-nocookie.com/embed/","//vk.com/","//www.vk.com/","//linkedin.com/","//www.linkedin.com/","//instagram.com/","//www.instagram.com/","//www.google.com/recaptcha/api2/","//hangouts.google.com/webchat/","//www.google.com/calendar/","//www.google.com/maps/embed","spotify.com/","soundcloud.com/","//player.vimeo.com/","//disqus.com/","//tgwidget.com/","//js.driftt.com/","friends2follow.com","/widget","login","//video.bigmir.net/","blogger.com","//smartlock.google.com/","//keep.google.com/","/web.tolstoycomments.com/","moz-extension://","chrome-extension://","/auth/","//analytics.google.com/","adclarity.com","paddle.com/checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com/shopping/customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com"]);
 </script>
 <script>
+</script>
+<script>
+let colorIndex = 0;  // Starting index
+
+// List of colors
+const colors = ['#1e1f26', '#03dac6', '#ff0266', '#faebd7', '#E57373', '#81C784', '#64B5F6', '#FFD54F', '#A1887F', '#9575CD', '#4DB6AC'];
+
+document.querySelector('.toggle-colors').addEventListener('click', () => {
+    colorIndex = (colorIndex + 1) % colors.length;  // Cycle through colors
+    const newColor = colors[colorIndex];
+    
+    document.querySelectorAll('.nav, .slider').forEach(elem => {
+        elem.style.backgroundColor = newColor;
+    });
+    
+    const textColor = isLight(newColor) ? '#000' : '#FFF';
+    const hoverColor = isLight(newColor) ? '#555' : '#DDD';
+
+    document.querySelectorAll('.nav h1, .slider h1, .slider h2').forEach(elem => {
+        elem.style.color = textColor;
+        elem.onmouseover = function() {
+            this.style.color = hoverColor;
+        }
+        elem.onmouseout = function() {
+            this.style.color = textColor;
+        }
+    });
+});
+
+// Utility function to check if color is light or dark
+function isLight(color) {
+    const r = parseInt(color.slice(1, 3), 16);
+    const g = parseInt(color.slice(3, 5), 16);
+    const b = parseInt(color.slice(5, 7), 16);
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return brightness > 128;  // This threshold can be adjusted
+}
+
 </script>
 </body>
 </html>
