@@ -33,7 +33,6 @@ a {
     color: #03dac6;
     transition: all 0.3s ease;
     z-index: 3;
-    max-font-size: 48px;  /* Prevents the font from getting too big on wide screens */
 }
 
 .slider h2 {
