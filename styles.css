@@ -22,9 +22,10 @@ a {
     padding: 0 2em;
     justify-content: center;
     transition: color 0.3s ease;
+    scroll-behavior: smooth;
 }
 
-.nav h1, .slider h1 {
+.nav h1, .slider h1 ,.slider a {
     font-family: "Josefin Sans", sans-serif;
     font-size: 5vw;
     margin: 0;
@@ -44,7 +45,7 @@ a {
     z-index: 4;
 }
 
-h1:hover, span:hover {
+h1:hover, span:hover, a:hover {
     transform: translate3d(0, -10px, 22px);
     color: #ff0266;
 }
@@ -230,7 +231,7 @@ h3.span {
 /* Style for the color toggle button */
 .toggle-colors {
     cursor: pointer;        /* Change mouse cursor to pointer on hover */
-    margin: 15px;      /* Give some space between the link and this button */
+    margin: 10px;      /* Give some space between the link and this button */
     font-size: 50px;        /* Set icon size */
     transition: background 0.3s, transform 0.3s;  /* Smooth transition for hover effects */
 }
